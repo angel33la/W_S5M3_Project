@@ -54,16 +54,16 @@ function moduleProject3() {
     nameP.textContent = learner.fullName;
 
     const idElement = document.createElement('p')
-    idElement.textContent = 'learner ID: ${learner.id}'
+    idElement.textContent = `learner ID: ${learner.id}`
     
     const dobP = document.createElement('p')
-    dobP.textContent = 'Date of Birth: ${learner.dateOfBirth}'
+    dobP.textContent = `Date of Birth: ${learner.dateOfBirth}`
 
     const favLangP = document.createElement('p')
     const favLanguage = languages.find(lang => lang.id === learner.favLanguage)
-    favLangP.textContent = 'Favorite Language: ${favLanguage.name}';
+    favLangP.textContent = `Favorite Language: ${favLanguage.name}`;
 
-    [nameP, dobP, favLangP].forEach(p => {
+    [nameP, dobP, favLangP, idElement].forEach(p => {
       card.appendChild(p);
     })
     card.addEventListener('click', evt => {
@@ -164,7 +164,7 @@ function moduleProject3() {
 
     let contactEmailP = document.createElement('p');
     contactEmailP.classList.add('contactEmail');
-    contactEmailP.innerHTML = `Email: <a href="mailTo:${footerData.contactEmail}" + ${footerData}`;
+    contactEmailP.innerHTML = `Email: <a href="mailTo:${footerData.contactEmail}"></a>`;
 
     companyInfoDiv.appendChild(companyNameP);
     companyInfoDiv.appendChild(addressP);
@@ -179,7 +179,7 @@ function moduleProject3() {
       socialMediaLink.textContent = platform.charAt(0).toUpperCase() + platform.slice(1);
       socialMediaDiv.appendChild(socialMediaLink);
     }
-    }
+    
 let currentYear = new Date().getFullYear();
 let copyright = document.createElement('div');
 copyright.textContent = `©  ${footerData.companyName.toUpperCase()} ${currentYear}`;
@@ -208,7 +208,7 @@ copyright.textContent = `©  ${footerData.companyName.toUpperCase()} ${currentYe
 
   //  ✨ do your magic here
 
-
+}
 // ❗ DO NOT CHANGE THIS CODE
 // ❗ DO NOT CHANGE THIS CODE
 // ❗ DO NOT CHANGE THIS CODE
